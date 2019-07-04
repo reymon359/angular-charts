@@ -7,7 +7,7 @@
     <div class="col">
         <div>
             <div style="display: block">
-                <canvas baseChart [datasets]="radarChartData" [options]="radarChartOptions" [labels]="radarChartLabels" [chartType]="radarChartType">
+                <canvas baseChart [datasets]="radarChartData" [options]="radarChartOptions" [colors]="radarChartColors" [labels]="radarChartLabels" [chartType]="radarChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
             </canvas>
             </div>
             <button class="btn btn-primary btn-block mt-4" color="primary" (click)="randomize()">Randomize</button>
