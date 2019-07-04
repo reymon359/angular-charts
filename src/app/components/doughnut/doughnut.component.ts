@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ChartType } from 'chart.js';
-import {Color, MultiDataSet, Label } from 'ng2-charts';
+import { Color, MultiDataSet, Label } from 'ng2-charts';
 @Component({
   selector: 'app-doughnut',
   templateUrl: './doughnut.component.html',
@@ -15,30 +15,25 @@ export class DoughnutComponent {
     [250, 130, 70],
   ];
   public doughnutChartColors: Color[] = [
-    { // grey
-      backgroundColor: 'rgba(148,159,177,0.7)',
-      borderColor: 'rgba(148,159,177,1)',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+    {
+      backgroundColor: [
+        'rgba(148,159,177,0.7)', 'rgba(77,83,96,0.7)', 'rgb(235, 104, 100,0.7)'
+      ],
+      borderColor: ['rgba(148,159,177,1)', 'rgba(77,83,96,1)', '#e22620'],
     },
-    { // dark grey
-      backgroundColor: 'rgba(77,83,96,0.7)',
-      borderColor: 'rgba(77,83,96,1)',
-      pointBackgroundColor: 'rgba(77,83,96,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(77,83,96,1)'
+    {
+      backgroundColor: [
+        'rgba(148,159,177,0.7)', 'rgba(77,83,96,0.7)', 'rgb(235, 104, 100,0.7)'
+      ],
+      borderColor: ['rgba(148,159,177,1)', 'rgba(77,83,96,1)', '#e22620'],
     },
-    { // red
-      backgroundColor: 'rgb(235, 104, 100,0.7)',
-      borderColor: '#e22620',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+    {
+      backgroundColor: [
+        'rgba(148,159,177,0.7)', 'rgba(77,83,96,0.7)', 'rgb(235, 104, 100,0.7)'
+      ],
+      borderColor: ['rgba(148,159,177,1)', 'rgba(77,83,96,1)', '#e22620'],
     }
+  
   ];
   public doughnutChartType: ChartType = 'doughnut';
 
