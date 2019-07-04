@@ -1,3 +1,16 @@
 <div class="row p-4">
-    <h2>Line Chart</h2>
+    <h2>Bar Chart</h2>
+</div>
+
+<div class="row">
+
+    <div class="col">
+        <div>
+            <div style="display: block">
+                <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [colors]="barChartColors" [legend]="barChartLegend" [chartType]="barChartType">
+              </canvas>
+            </div>
+            <button class="btn btn-primary btn-block" color="primary" (click)="randomize()">Update</button>
+        </div>
+    </div>
 </div>
