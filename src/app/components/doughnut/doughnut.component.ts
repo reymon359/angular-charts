@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { ChartType } from 'chart.js';
-import { Color, MultiDataSet, Label } from 'ng2-charts';
+import { Color, BaseChartDirective, MultiDataSet, Label } from 'ng2-charts';
 @Component({
   selector: 'app-doughnut',
   templateUrl: './doughnut.component.html',
@@ -14,6 +14,7 @@ export class DoughnutComponent {
     [50, 150, 120],
     [250, 130, 70],
   ];
+ 
   public doughnutChartColors: Color[] = [
     {
       backgroundColor: [
@@ -33,9 +34,19 @@ export class DoughnutComponent {
       ],
       borderColor: ['rgba(148,159,177,1)', 'rgba(77,83,96,1)', '#e22620'],
     }
-  
   ];
+
   public doughnutChartType: ChartType = 'doughnut';
+
+  @ViewChild(BaseChartDirective, { static: true }) chart: BaseChartDirective;
+  public randomize(): void {
+    for (let i = 0; i < this.doughnutChartData.length; i++) {
+      for (let j = 0; j < this.doughnutChartData[i].length; j++) {
+        this.doughnutChartData[i][j] = Math.round(Math.random() * 100);
+      }
+    }
+    this.chart.update();
+  }
 
   // events
   public chartClicked({ event, active }: { event: MouseEvent, active: {}[] }): void {

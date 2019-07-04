@@ -10,6 +10,7 @@
                 <canvas baseChart [data]="doughnutChartData" [colors]="doughnutChartColors" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
               </canvas>
             </div>
+            <button class="btn btn-primary btn-block mt-4" color="primary" (click)="randomize()">Randomize</button>
         </div>
     </div>
 </div>
