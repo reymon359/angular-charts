@@ -3,6 +3,16 @@
 </div>
 <div class="row">
 
+    <div class="col">
+        <div style="display: block;">
+            <canvas baseChart width="400" height="400" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+        </div>
+
+        <button class="btn btn-primary btn-block" color="primary" (click)="randomize()">Randomize</button>
+    </div>
+</div>
+<!-- <div class="row">
+
     <div class="col-md-6">
 
         <div style="display: block;">
@@ -22,4 +32,4 @@
 
 
     </div>
-</div>
+</div> -->
